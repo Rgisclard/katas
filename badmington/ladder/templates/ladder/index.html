@@ -71,9 +71,10 @@
                 if (xhttp.readyState == 4 && xhttp.status == 200) {
                     name = document.getElementById("name").innerHTML = xhttp.responseText;
                 }
+                xhttp.open("GET", "/new/" + name, true);
+                xhttp.send();
             };
-            xhttp.open("GET", "/new/" + name, true);
-            xhttp.send();
+
         }
 
         const swap = () => {
