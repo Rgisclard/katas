@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Badmington</title>
+    <title>Badminton</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="{% static "css/style.css" %}">
@@ -15,11 +15,11 @@
     <header>
         <div class="logo">
             <img src="" alt="">
-            <h1>Meudon Badmington</h1>
+            <h1>Meudon Badminton</h1>
         </div>
     </header>
     {% block content %}
-    <ul>
+    <ul class="list">
         {% for player in user_list %}
         <li>
             <div>{{forloop.counter}}</div>
