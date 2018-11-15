@@ -2,11 +2,11 @@
 <html class="no-js" lang="">
 
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Badmington</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Badmington</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 
 <body>
@@ -16,11 +16,16 @@
             <h1>Meudon Badmington</h1>
         </div>
     </header>
+    {% block content %}
     <ul>
-        <li>Foo</li>
-        <li>BAR</li>
-        <li>BAZ</li>
+        {% for player in user_list %}
+        <li>
+            <div>{{player.counter}}</div>
+            <div>{{player.name}}</div>
+        </li>
+        {% endfor %}
     </ul>
+    {% endblock %}
     <footer>
         <ul>
             <li>
@@ -29,11 +34,11 @@
             <li></li>
         </ul>
     </footer>
-  <!--[if lte IE 9]>
+    <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
