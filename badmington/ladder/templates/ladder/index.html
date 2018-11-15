@@ -22,8 +22,8 @@
     <ul>
         {% for player in user_list %}
         <li>
-            <div>{{player.counter}}</div>
-            <div>{{player.name}}</div>
+            <div>{{forloop.counter}}</div>
+            <div>{{player.player.name}}</div>
         </li>
         {% endfor %}
     </ul>
@@ -31,6 +31,7 @@
     <footer>
         <ul>
             <li>
+                <input id="addPlayer" type="text">
                 <button onclick="add()">Ajouter un utilisateur</button>
             </li>
             <li></li>
@@ -39,7 +40,7 @@
     <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-        
+
     <script src="{% static js/main.js %}"></script>
 
 </body>
