@@ -8,7 +8,27 @@
     <title>Badminton</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="{% static "css/style.css" %}">
+    <link rel="stylesheet" href="{% static " css/style.css" %}">
+    <style>
+        header {
+            border-bottom: 1px solid black;
+            width: 100%;
+            background: black;
+            color: white;
+        }
+
+        .list {
+            display: block;
+
+            list-style: none;
+            width: 100%;
+        }
+
+        .list li {
+            border: 1px black solid;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -21,7 +41,7 @@
     {% block content %}
     <ul class="list">
         {% for player in user_list %}
-        <li>
+        <li onclick="swap()" id="{{player.id}}">
             <div>{{forloop.counter}}</div>
             <div>{{player.player.name}}</div>
         </li>
@@ -31,8 +51,8 @@
     <footer>
         <ul>
             <li>
-               <input id="name" type="text">
-                <button onclick="send()">Ajouter un utilisateur</button>
+                <input id="name" type="text">
+                <button onclick="add()">Ajouter un utilisateur</button>
             </li>
             <li></li>
         </ul>
@@ -41,7 +61,25 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-    <script src="{% static "js/main.js" %}"></script>
+    <!-- <script src="{% static "js/main.js" %}"></script> -->
+    <script>
+        const result = () => window.prompt('inscriver votre resultat (v = victoire / D = defaite)')
+        const add = () => {
+            const xhttp = new XMLHttpRequest();
+            const name
+            xhttp.onreadystatechange = function () {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    name = document.getElementById("name").innerHTML = xhttp.responseText;
+                }
+            };
+            xhttp.open("GET", "/new/" + name, true);
+            xhttp.send();
+        }
+
+        const swap = () => {
+
+        }
+    </script>
 
 </body>
 

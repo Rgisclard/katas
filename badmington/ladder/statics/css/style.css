@@ -1,18 +1,19 @@
-header{
-border-bottom: 1px solid black;
-width: 100%;
-background: black;
-color: white;
+header {
+    border-bottom: 1px solid black;
+    width: 100%;
+    background: black;
+    color: white;
 }
-.list{
+
+.list {
     display: block;
 
     list-style: none;
     width: 100%;
 }
-.list li{
+
+.list li {
     border: 1px black solid;
 }
-footer{
 
-}
+footer {}

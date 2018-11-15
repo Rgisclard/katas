@@ -1,5 +1,5 @@
 const result = () => window.prompt('inscriver votre resultat (v = victoire / D = defaite)')
-const send = () => {
+const add = () => {
     const xhttp = new XMLHttpRequest();
     const name
     xhttp.onreadystatechange = function () {
@@ -10,3 +10,4 @@ const send = () => {
     xhttp.open("GET", "/new/" + name, true);
     xhttp.send();
   }
+  const 
