@@ -1,5 +1,6 @@
+{% load static %}
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -7,7 +8,7 @@
     <title>Badmington</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{% static css/style.css %}">
 </head>
 
 <body>
@@ -30,7 +31,7 @@
     <footer>
         <ul>
             <li>
-                <button>Add User</button>
+                <button onclick="add()">Ajouter un utilisateur</button>
             </li>
             <li></li>
         </ul>
@@ -38,8 +39,8 @@
     <!--[if lte IE 9]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-
-    <script src="js/main.js"></script>
+        
+    <script src="{% static js/main.js %}"></script>
 
 </body>
 
