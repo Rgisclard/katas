@@ -69,8 +69,9 @@
             let name = ""
             xhttp.onreadystatechange = function () {
                 if (xhttp.readyState == 4 && xhttp.status == 200) {
-                    name = document.getElementById("name").innerHTML = xhttp.responseText;
+                    name = document.getElementById("name").value
                 }
+
                 xhttp.open("GET", "/new/" + name, true);
                 xhttp.send();
             };
